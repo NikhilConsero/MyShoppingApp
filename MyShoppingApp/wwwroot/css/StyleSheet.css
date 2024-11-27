@@ -1,6 +1,12 @@
 ﻿body {
+    margin:0;
+    padding:0;
 
 }
 thead{
-    background-color:red;
+    background-color:rgb(121, 231, 248);
+}
+tbody{
+    background-color:rgb(249, 250, 218)
+
 }

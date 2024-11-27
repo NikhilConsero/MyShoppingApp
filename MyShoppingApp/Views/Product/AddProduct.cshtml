@@ -3,27 +3,27 @@
 	ViewData["Title"] = "Add Product";
 }
 @{
-<a asp-controller="Product" asp-action="Index" class="btn btn-outline-primary">Back to Products</a>
 <h1>AddProduct</h1>
 <hr />
 <div>
 	<form method="post">
 	<div class="form-group">
 		<label>Product Name</label>
-		<input asp-for="Name" type="text" class="form-control"/>
+		<input asp-for="Name" type="text" value="" class="form-control"/>
 	</div>
 	<div class="form-group">
 		<label>Product Desc</label>
-				<input asp-for="Description" type="text" class="form-control">
+				<input asp-for="Description" type="text" value="" class="form-control">
 	</div>
 	<div class="form-group">
 		<label>Product Category</label>
-				<input asp-for="Category" type="text" class="form-control" />
+				<input asp-for="Category" type="text" value="" class="form-control" />
 	</div>
 	<input type="submit" value="Save" class="btn btn-primary"/>
 	<input type="button" value="Reset" class="btn btn-secondary"/>
 
 	</form>
+		<a asp-controller="Product" asp-action="Index" class="btn btn-outline-primary">Back to Products</a>
 	<hr/>
 	@{
 		if(ViewBag.message!=null)
