@@ -1,0 +1,11 @@
+﻿@model IEnumerable<MyShopingApp.Models.Category>
+
+<h1>
+
+
+	@foreach (var item in Model)
+	{
+		<h4>@item.Category_Id</h4>
+	}
+</h1>
+<a asp-controller="Category" asp-action="index" class="btn btn-outline-primary">Back to List</a>
