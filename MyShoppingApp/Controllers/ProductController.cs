@@ -5,6 +5,7 @@ namespace MyShoppingApp.Controllers
 {
     public class ProductController : Controller
     {
+        public static List<Product> productList = new List<Product>();
         public IActionResult Index()
         {
             List<int> products = new List<int>();
@@ -29,6 +30,11 @@ namespace MyShoppingApp.Controllers
         {
             //How to pass data from action to view page
             ViewBag.message = "Successfully Added......!";
+            productList.Add(product);
+            return View("index",productList);
+        }
+        public IActionResult EditProduct(int id)
+        {
             return View();
         }
     }
